@@ -2,9 +2,15 @@
 <!-- NOTE: the string 'TODO' appears everywhere you need to fill in information. -->
 <html>
 <head>
-<title>100 Trolley Problems</title>
+<title>$1 per hour</title>
 <!-- NOTE: this CSS sets up the ".figure" class to center images, and instructs images in ".figure"s to have space around them and to render crisp pixel edges when scaled [e.g. for retina displays]. -->
 <style>
+body {
+	background:#fff;
+	color:#000;
+	margin:0;
+	padding:0;
+}
 .figure {
 	text-align:center;
 }
@@ -12,32 +18,59 @@
 	margin: 0px 20px;
 	image-rendering: pixelated;
 }
+h1 {
+	margin:0;
+	padding: 5px 5px 0 5px;
+	background:#ddd;
+}
+#author {
+	margin:0;
+	padding: 0 10px 0 30px;
+	border-bottom: 3px solid #ccc;
+	background:#ddd;
+}
+h2 {
+	margin:1em 0;
+	padding: 5px 5px 5px 0;
+	background:#ddd;
+	border-bottom: 3px solid #ccc;
+}
+h1, #author, h2 {
+	background: linear-gradient(to right,
+		#dddddd   0%, #dddddd  75%,
+		#dce8d2  75%, #d2e8e1  80%,
+		#d2e8e1  80%, #d2e8e1  85%,
+		#d2e2e8  85%, #d2e2e8  90%,
+		#d7d2e8  90%, #d7d2e8  95%,
+		#e8d2e8  95%, #e8d2e8 100%);
+}
+p {
+	margin: 1em;
+}
 </style>
 </head>
 <body>
-<h1>100 Trolley Problems</h1>
-<p>Oh! I know the trolley problem. But...wait, is it a bit different?</p>
+<h1>$1 per hour</h1>
+<p>Park and deliver car for your customers.</p>
 <!-- the <div> wrapping this image centers it on the page. -->
 <!-- TODO: drawing showing the main view of the game during play -->
 <div class="figure">
 <img src="game.png" />
 </div>
-<p>This game is an extension of the famous trolley problem. A message shows up at every stage, stating the situation players face. The players can press S key to trigger the switch, deciding which track the trolley would go. The trolley departs ten seconds after the message shows up or the player press D key. After the trolley has reached the end, a new (non-repeating) situation is randomly generated. This game ends when running out of all of the built-in cases.</p>
+<p>You are paid $1 per hour to work as a valet in a multi-entrance and multi-exit parking lot. When a car drives in, you park it to proper position. Sometimes a/several customers show up at the exit to take back their cars, you find their car and drive it to the exit.</p>
 
 <h2>Gameplay</h2>
-<p><b>Start:</b>
-The game starts at the classic trolley problem. The trolley would be placed at the beginning of the track, waiting for departure. The rails and objects (human, obstacles...) are generated based on built-in settings. The messages shows up and the player have at most ten seconds to read the message, deciding whether to press the S key. And the trolley departs, driving towards the end of the rail (may or may not drive over some people). Once the trolley have reachde the end of the rail, the game picks up a random situation and refresh the screen.
+<p>
+The player will be at one of the exits at the beginning, waiting for the first customer. The player can move around using arror keys or wasd. When customer comes, the player's goal is to serve the customer as fast as possible. Once you finish your job, the player is tipped. (Did I tell you that you are paid only $1 per hour? Work hard to get tips!)
+When customers show up, they have two different kind of requests.
 </p>
-
-<div class="figure">
-<img src="switch.png" />
-</div>
-<p><b>Switch:</b>
-The switch changes the track on which the trolley will drive.
-</p>
-
-<p><b>Finish:</b>
-Once running out of all of the built-in cases, the game finishes will greetings.
+<ul>
+<li><em>Want to park their car</em> -- Go to their position and you will take control of their car automatically, park it into any proper position. The faster you do it, the more tip you will get.</li>
+<li><em>Want to take back their car</em> -- It's easy to find their car because it will start glowing or flashing. Go to the position of flashing car and you will take control of if automatically. Return the car to your customre asap. The faster you do it, the more tip you will get.</li>
+</ul>
+<p>
+Remember, if you crash the car, your money will be halved.
+If you have more money, you will have more customers. And customers' patience will decrease because they think you are a professional.
 </p>
 <!-- TODO: illustrate your descriptions with more drawings -->
 
