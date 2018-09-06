@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- NOTE: the string 'TODO' appears everywhere you need to fill in information. -->
+<html>
+<head>
+<title>100 Trolley Problems</title>
+<!-- NOTE: this CSS sets up the ".figure" class to center images, and instructs images in ".figure"s to have space around them and to render crisp pixel edges when scaled [e.g. for retina displays]. -->
+<style>
+.figure {
+	text-align:center;
+}
+.figure > img {
+	margin: 0px 20px;
+	image-rendering: pixelated;
+}
+</style>
+</head>
+<body>
+<h1>100 Trolley Problems</h1>
+<p>Oh! I know the trolley problem. But...wait, is it a bit different?</p>
+<!-- the <div> wrapping this image centers it on the page. -->
+<!-- TODO: drawing showing the main view of the game during play -->
+<div class="figure">
+<img src="game.png" />
+</div>
+<p>This game is an extension of the famous trolley problem. A message shows up at every stage, stating the situation players face. The players can press S key to trigger the switch, deciding which track the trolley would go. The trolley departs ten seconds after the message shows up or the player press D key. After the trolley has reached the end, a new (non-repeating) situation is randomly generated. This game ends when running out of all of the built-in cases.</p>
+
+<h2>Gameplay</h2>
+<p><b>Start:</b>
+The game starts at the classic trolley problem. The trolley would be placed at the beginning of the track, waiting for departure. The rails and objects (human, obstacles...) are generated based on built-in settings. The messages shows up and the player have at most ten seconds to read the message, deciding whether to press the S key. And the trolley departs, driving towards the end of the rail (may or may not drive over some people). Once the trolley have reachde the end of the rail, the game picks up a random situation and refresh the screen.
+</p>
+
+<div class="figure">
+<img src="switch.png" />
+</div>
+<p><b>Switch:</b>
+The switch changes the track on which the trolley will drive.
+</p>
+
+<p><b>Finish:</b>
+Once running out of all of the built-in cases, the game finishes will greetings.
+</p>
+<!-- TODO: illustrate your descriptions with more drawings -->
+
+<h2>Assets</h2>
+<div class="figure">
+<img src="track.png" />
+<img src="trolley.png" />
+</div>
+<p>
+Here are basic meshes for <a href="https://free3d.com/3d-model/trolley-car-v1--666009.html">trolley</a> and <a href="https://free3d.com/3d-model/rail-train-26725.html">railway track</a>, pictured above.
+</p>
+
+</body>
+</html>
